@@ -1,0 +1,679 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background: #544937;
+    --bg-nav: #EECF98   ;
+    --footer: #A18C68;
+    --text-color: #D4B88A;
+    --font: 'Poppins', sans-serif;
+    --dancing:  'Dancing Script', sans-serif;
+}
+
+.img-clock{
+    width: 400px;
+    position: absolute;
+    top: 380px;
+    left: -140px;
+    transform: rotate(120deg);
+    opacity: 0.2;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.btn-to-top {
+    position: fixed;
+    bottom: 20px;
+    right:40px;
+    background-color: var(--bg-nav);
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 102;
+}
+
+.btn-to-top:hover{
+    bottom: 30px;
+    transition: all .35s ease;
+    box-shadow: 0px 4px 10px 0px black;
+}
+
+.btn-to-top a i{
+    color: black;
+    font-size: 1.5rem;
+}
+
+body{
+    position: relative;
+    background-color: var(--background);
+}
+
+
+body > .head-promotion{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+body > .head-promotion h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    color: black;
+    text-align: center;
+    font-size:1rem;
+    font-family: var(--font);
+    font-weight: 300;
+}
+
+body > .head-promotion h1 > span {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+body > header span figure{
+    display: flex;
+    align-items: center;
+}
+
+body > header span figure img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+header {
+    position: fixed;
+    top: 40px;
+    z-index: 4;
+    background-color: var(--bg-nav);
+    width: 100%;
+    height: 70px;
+}
+
+header nav{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font);
+    justify-content: space-around;
+}
+
+header nav .logo{
+    font-size: 1.8rem;
+    font-family: var(--dancing);
+    font-weight: 700;
+}
+
+header nav .logo a{
+    color: white;
+    text-decoration: none;
+}
+
+header nav #cart{display: flex;}
+
+header nav #cart i{
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+header nav #cart .carts{
+    position: relative;
+}
+
+header nav #cart .carts > span{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -12px;
+    left: 33px;
+    font-weight: 700;
+    color: black;
+    padding: 5px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+header nav #cart .carts > span:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+header nav #cart .account{
+    border-radius:0px 0px 40px 10px; 
+    text-align: center;
+    background-color: var(--bg-nav);
+    font-family: var(--font);
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 70px;
+    width: 120px;
+    transform: translateY(-70%);
+    z-index: 1;
+    transition: transform .35s ease;
+}
+
+header nav #cart .account.showOptions{
+    opacity: 1;
+    visibility: visible;
+    z-index: 99; 
+    height: 100px;
+    transform: translateY(0%);
+    transition: transform .35s ease;
+
+}
+
+
+header nav #cart .account button{
+    padding: 10px 25px;
+    margin: 10px;
+    border:none;
+    font-weight: 700;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+header nav #cart .account button:hover{
+    background-color: var(--text-color);
+    color: white!important;
+}
+
+header nav #cart .account p{
+    font-weight: 200;
+    cursor: pointer;
+}
+
+header nav #cart .account a{
+    color: black;
+    text-decoration: none;
+}
+
+header nav #cart .account p:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li{
+    position: relative;
+    margin: 20px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+header nav ul li::before{
+    position: absolute;
+    content: " ";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    background-color:white;
+}
+
+
+header nav ul li:hover::before{
+    width: 100%;
+    transition: width .25s ease;
+}
+
+header nav ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    font-weight: 700;
+}
+
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+#home .swiper .swiper-wrapper .swiper-slide{
+    position: relative;
+}
+
+#home .swiper .swiper-wrapper .swiper-pagination{
+    position: fixed;
+    z-index: 21;
+    bottom: 10px;
+}
+
+
+#home .swiper .swiper-wrapper .swiper-slide .text{
+    position:absolute;
+    left: 0px;
+    top: 130px;
+    font-family: var(--font);
+}
+
+#home .swiper .swiper-wrapper .swiper-slide .text h2{
+    font-size: 2rem;
+    color: var(--background);
+    background-color: var(--bg-nav);
+    padding: 10px;
+}
+
+#home .swiper .swiper-wrapper .swiper-slide .text p{
+    font-weight: 300;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+
+#home .swiper .swiper-wrapper .swiper-slide figure img{
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+}
+
+#home .category {
+    text-align: center;
+    font-family: var(--font);
+    margin-top: 45px;
+}
+
+#home .category > h2{
+    color: white;
+    font-family: var(--font);
+    font-weight: 400;
+    position: relative;
+}
+
+
+#home .category > h2:after{
+    position: absolute;
+    top: 20px;
+    right: 430px;
+    content: " ";
+    width: 10%;
+    height: 2px;
+    background-color: white;
+}
+
+#home .category > h2:before{
+    position: absolute;
+    top: 20px;
+    left: 430px;
+    content: " ";
+    width: 10%;
+    height: 2px;
+    background-color: white;
+}
+
+#home .clocks{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .clocks div{
+    margin: 0 25px;
+    background-color: var(--footer);
+    cursor: pointer;
+    font-family: var(--font);
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#home .clocks div:hover{
+    transform: scale(1.1);
+    transition: all .25s ease;
+}
+
+#home .clocks div a{
+    text-decoration: none;
+}
+
+#home .clocks div a p{
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: white;    
+}
+
+
+#home .clocks div img{
+    width: 100%;
+    height: 100px;
+}
+
+#home .clocks div:hover img{
+    border-radius: 50%;
+    width: 70%;
+    transition: all .35s ease;
+}
+
+#product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#product .clock-product{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    height: 400px;
+    background-color: var(--footer);
+    padding-top: 40px;
+    position: relative;
+    border-radius: 4px;
+}
+
+#product .clock-product h3{
+    position: absolute;
+    top: 10px;
+    left: 20rem;
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: center;
+    color: white;
+}
+
+
+#product .clock-product .slides{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#product .clock-product figure img{
+    margin: 5px;
+    width: 110px;
+    background-size: cover;
+}
+
+#product .clock-product .slide-product{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    height: 75%;
+    width: 48%!important;
+    margin: 0 ;
+}
+
+
+#product .clock-product .slide-product:hover{
+    border-radius: 4px;
+    transform: scale(1.1);
+    transition: transform .25s ease;
+    background-color: var(--bg-nav);
+}
+
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    75% {
+        transform: scale(1.3);
+    }
+    85% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+#product .clock-product .slide-product .new{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: none;
+    align-items: center;
+    font-family: var(--font);
+    font-weight: 700;
+    color: white;
+    padding: 7px;
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--footer);
+    animation: pulse 1s infinite;
+}
+
+
+#product .clock-product .slide-product .new.ativo{
+    display: flex;
+}
+
+#product .clock-product .slide-product .info-clock{
+    font-family: var(--font);
+    margin-left: 10px;
+}
+
+#product .clock-product .slide-product .info-clock h4{
+    font-size: 1.2rem;
+    width: 40%;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    background-color: #544937;
+}
+
+
+#product .clock-product .slide-product .info-clock .mark{
+    font-weight: 700;
+    background-color: #544937;
+    color: white;
+    width: 45%;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+#product .clock-product .slide-product .info-clock .mark span {
+    font-weight: 400;
+}
+
+
+#product .clock-product .slide-product .info-clock p{
+    text-align: left;
+    font-weight: 400;
+}
+
+#product .clock-product .slide-product .info-clock .price{
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+
+#product .clock-product .slide-product .info-clock button{
+    width: 80%;
+    padding: 10px 20px;
+    border:1px solid white;
+    background: transparent;
+    cursor: pointer;
+    color: var(--background);
+    font-weight: 700;
+    font-family: var(--font);
+    margin-top: 10px;
+}
+
+#product .clock-product .slide-product .info-clock button:hover{
+    background: var(--background);
+    color: white;
+    border:none;
+    border-radius: 8px;
+    transition: all .35s ease;
+}
+
+.news-letter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-image: url(../assets/pexels-wallace-chuck-3109167.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.news-letter .text-news{
+    font-family: var(--font);
+}
+
+.news-letter .text-news h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    padding: 5px;
+}
+
+.news-letter .input-news{
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.news-letter .input-news input{
+    border:none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+}
+
+.news-letter .input-news button{
+    padding: 8px;
+    border:none;
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--background);
+    color: white;
+}
+
+.news-letter .input-news button:hover{
+    background-color: var(--text-color);
+    transition: all .25s ease;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--footer);
+    color :white;
+}
+
+footer .content-footer{
+    display: flex;
+    margin: 20px 0;
+}
+
+footer .title-footer {
+    font-family: var(--font);
+}
+
+footer .title-footer .logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 10px; 
+}
+
+footer .lista nav {
+    display: flex;
+}
+
+
+footer .lista nav ul {
+    text-align: center;
+    font-family: var(--font);
+    margin: 10px 45px;
+    list-style: none;
+    border-left: 1px solid white;
+    padding-left:10px;
+}
+
+footer .lista nav ul:last-child .redes{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+
+footer .lista nav ul:last-child .redes i{
+    font-size: 1.3rem;
+}
+
+
+footer .lista nav ul:last-child .redes i:hover{
+    color: black;
+}
+
+footer .lista nav ul h3{
+    text-align: left;
+    position: relative;
+}
+
+footer .lista nav ul h3::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: " ";
+    width: 50%;
+    height: 2px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+
+footer .lista nav ul li {
+    margin: 10px 0px;
+    text-align: left;
+}
+
+footer .lista nav ul li a{
+    text-decoration: none;
+    color :white;
+    font-weight: 400;
+
+}
+
+footer .lista nav ul li a:hover{
+    font-weight: 700;
+}
+
+footer p{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color:#aa8b56d7; 
+}

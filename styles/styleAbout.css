@@ -1,0 +1,311 @@
+html{
+    scroll-behavior: smooth;
+}
+
+#abouts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    font-weight: 400;
+    font-family: var(--font);
+}
+
+#abouts h1{
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+
+}
+
+#abouts h1::after{
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    bottom: 20px;
+    background-color: white;
+    content: " ";
+    left: 170px;
+}
+
+
+#abouts h1::before{
+    position: absolute;
+    left: -155px;
+    width: 90%;
+    height: 2px;
+    bottom: 20px;
+    background-color: white;
+    content: " ";
+}
+
+#abouts .content{
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    padding: 30px 0;
+    background-attachment: fixed;
+}
+
+#abouts .content .content-text{
+    margin: 10px;
+}
+
+#abouts .content .content-text h2{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;  
+    font-family: var(--font);
+}
+
+#abouts .content .content-text p {
+    font-size: 1.1rem;
+    font-weight: 300;  
+    font-family: var(--font);
+}
+
+#abouts .content .content-text .redes-sociais-about{
+    display: flex;
+}
+
+#abouts .content .content-text .redes-sociais-about li{
+    list-style-type: none;
+    margin: 20px;
+    animation: pulse 1s infinite;
+}
+
+#abouts .content .content-text .redes-sociais-about li i{
+    font-size: 1.5rem;
+    color: black;
+}
+
+#abouts .content figure {
+    margin: 0 30px;
+}
+
+#abouts .content figure img{
+    position: relative;
+    z-index: 2; 
+    width: 380px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+#abouts .content figure .square{
+    position: absolute;
+    top: 235px;
+    left: 30px;
+    width: 400px;
+    height: 280px;
+    z-index: 1;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-color: var(--bg-nav);
+}
+
+
+#contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font);
+    background-image: url(../assets/pexels-jeshootscom-714701.jpg);
+    background-size: cover;
+}
+
+#contacts .contact-text{
+    text-align: left;
+    color: white;
+    padding-left: 6rem;
+    font-family: var(--dancing);
+}
+
+#contacts .contact-text .sociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#contacts .contact-text .sociais a{
+    text-decoration: none;
+    margin: 0 20px;
+    color: white;
+}
+
+#contacts .contact-text .sociais a:hover{
+    text-decoration: underline;
+}
+
+#contacts .contact-text .sociais li{ 
+    font-family: var(--font);
+    font-weight: 400;
+    list-style: none;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+#contacts .contact-text .sociais li:hover i{
+    transform: scale(1.3);
+    transition: all .25s ease;
+}
+
+#contacts .contact-text h3{
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+#contacts .contact-text p{
+    font-size: 1rem;
+    font-family: var(--font);
+    font-weight: 400;
+}
+
+
+#contacts .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    padding-top: 40px;
+}
+
+#contacts .form h4{
+    font-size: 1.4rem;
+    font-family: var(--font);
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contacts .form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#contacts .form form textarea {
+    width: 90%;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid grey;
+    outline: none;
+    resize: none;
+    font-family: var(--font);
+}
+
+#contacts .form form button {
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    border:none;
+    color: white;
+    font-weight: 700;
+    font-family: var(--font);
+    border-radius: 40px;
+    text-transform: uppercase;
+    background-color: var(--text-color) ;
+}
+
+
+#contacts .form form button:hover{
+    background-color: var(--bg-nav) ;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+#contacts .form form .input-name,
+#contacts .form form .input-email{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#contacts .form form .input-email input,
+#contacts .form form .input-name input{
+    padding: 8px;
+    border: 1px solid rgba(54, 51, 51, 0.719);
+    border-radius: 20px;
+    outline: none;
+    background: transparent;
+    margin: 5px 10px;
+}
+
+#contacts .form form input:focus{
+    border: 2px solid var(--text-color);
+}
+
+#contacts .form form .input-email span,
+#contacts .form form .input-name span{
+    font-weight: 700;
+    font-size: .9rem;
+    font-family: var(--font);
+    color: black;
+    user-select: none;
+    opacity: 0.50;
+    margin-left: 5px;
+}
+
+#contacts .form form .input-name .first-name{
+    position: relative;
+}
+
+#contacts .form form .input-name .first-name span{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}
+
+#contacts .form form .input-email .email-person input:focus + span,
+#contacts .form form .input-email .number-phone input:focus + span,
+#contacts .form form .input-name .second-name input:focus + span,
+#contacts .form form .input-name .first-name input:focus + span,
+#contacts .form form .input-name .first-name input:valid + span{
+    position: absolute;
+    top: -7px;
+    transition: top .25s ease;
+    opacity: 1;
+    background-color: white;
+}
+
+#contacts .form form .input-name .second-name{
+    position: relative;
+}
+
+#contacts .form form .input-name .second-name span{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+
+}
+
+/* input number & Email */
+
+#contacts .form form .input-email .number-phone{
+    position: relative;
+}
+
+#contacts .form form .input-email .number-phone span{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+
+}
+
+#contacts .form form .input-email .email-person{
+    position: relative;
+}
+
+#contacts .form form .input-email .email-person span{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}

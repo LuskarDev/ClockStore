@@ -1,0 +1,18 @@
+@media (max-width: 1250px) {
+    #home .category > h2:after{
+       display: none;
+    }
+    
+    #home .category > h2:before{
+      display: none;
+    }
+    
+}
+
+@media (max-width: 1326px) {
+
+    #home .category {
+        margin-top: 0px!important;
+    }
+}
+

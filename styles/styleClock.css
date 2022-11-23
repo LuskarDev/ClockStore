@@ -1,0 +1,247 @@
+body {
+    background-color:var(--background);
+    background-size: cover;
+}
+
+header nav #cart .menu i:last-child{
+    display: none;
+} 
+
+header nav #cart .menu i:last-child.showClose{
+    display: block;
+}
+
+header nav #cart .menu i:first-child.Closemenu{
+    display: none;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav .input-search{
+    display: flex;
+    width: 40%;
+    background-color: white;
+    padding: 0px;
+    border: 1px solid rgba(51, 49, 49, 0.521);
+    border-radius: 2px;
+}
+
+header nav .input-search .filter{
+    background-color: var(--bg-nav);
+    padding: 10px;
+    border-right: 1px solid rgba(51, 49, 49, 0.521);
+}
+
+header nav .input-search input{
+    width: 100%;
+    border:none;
+    outline: none;
+    padding-left: 5px;
+}
+
+header nav .input-search button {
+    border: none;
+    cursor: pointer;
+    background-color: var(--bg-nav);
+    padding: 10px;
+    border-left: 1px solid rgba(51, 49, 49, 0.521);
+}
+
+header nav .lista{
+    opacity: 0;
+    visibility: hidden;
+    width: 0%;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    padding-top: 10rem;
+    background-color: var(--bg-nav);
+    transition: width .35s ease; 
+    z-index: -1;
+}
+
+header nav .lista.showMenu{
+    opacity: 1;
+    visibility: visible;
+    width: 20%;
+    transition: width .45s ease; 
+}
+
+header nav .lista li{
+    width: 80%;
+    padding: 5px 10px;
+    margin: 5px 0px;
+}
+
+header nav .lista li a{
+    color: white;
+    font-size: 1.2rem;
+}
+
+section {
+    height: 100%;
+    padding-top: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section .optionsFilter{
+    position: fixed;
+    top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    padding-top: 4rem;
+    margin-bottom: 50px;
+    transition: all .25s ease;
+
+    z-index: 1;
+}
+
+section .optionsFilter h1{
+    font-size: 1rem;
+    font-family: var(--font);
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+section .optionsFilter.showCategory{
+    height: 170px;
+    transition: all .25s ease;
+    padding-top: 0;
+}
+
+
+section .optionsFilter h1 > span{
+    font-weight: 400;
+    cursor: pointer;
+}
+
+section .optionsFilter h1 > span:hover{
+    text-decoration: underline;
+}
+
+section .optionsFilter .options {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+}
+
+
+section .optionsFilter .options.ShowOptions{
+    opacity: 1;
+    visibility: visible;
+}
+
+section .optionsFilter .options .filter{
+    margin: 0 15px;
+    font-family: var(--font);
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid var(--text-color);
+}
+
+
+section .optionsFilter .options .filter select{
+    background: transparent;
+    border:none;
+    cursor: pointer;
+}
+
+section .products {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    background-color: var(--footer);
+    margin-bottom: 10px;
+}
+
+section .products .card-product{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    border: 1px solid rgba(71, 69, 69, 0.637);
+    margin: 10px 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+section .products .card-product h2{
+    text-align: center;
+    font-family: var(--font);
+    width: 80%;
+    margin: 5px 0px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+section .products .card-product h3{
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font);
+    margin: 5px 0px;
+    font-weight: 200;
+}
+
+section .products .card-product p {
+    font-family: var(--font);
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+section .products .card-product:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform .25s ease;
+    box-shadow: 0px 3px 10px 0px grey;
+}
+
+
+section .products .card-product .buttons{
+    text-align: center;
+}
+
+section .products .card-product .buttons button{
+    border:1px solid var(--text-color);
+    background: transparent;
+    cursor: pointer;
+    color: var(--background);
+    width: 80%;
+    padding: 5px;
+    font-size: .8rem;
+    font-family: var(--font);
+    font-weight: 700;
+    cursor: pointer;
+    margin: 5px;
+}
+
+section .products .card-product .buttons button:hover{
+    border-radius: 4px;
+    transition: all .25s ease;
+    background-color: var(--text-color);
+    color: white;
+}
+
+section .products .card-product figure img{
+    width: 150px;
+    background-size: cover;
+}
