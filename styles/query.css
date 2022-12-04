@@ -349,15 +349,18 @@ header nav ul li::before{
     }
 
     header nav .lista{
-        z-index: 1;
+        justify-content: flex-start;
+        z-index: 9!important;
         width: 100%!important;
         height: 100vh!important;
         transition: all .35s ease;
     }
 
     header nav .lista li {
+        font-size: 2rem!important;
         font-family: var(--font);
         font-weight: 700;
+        margin: 10px 0!important;
     }
 }
 
