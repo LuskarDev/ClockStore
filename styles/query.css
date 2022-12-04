@@ -33,7 +33,6 @@
 }
 
 @media (max-width: 389px){
-  
 
     #product {
         margin-top: 0rem!important;
@@ -44,9 +43,20 @@
     }
 }
 
+@media (max-width:423px){
+    
+    footer .content-footer .lista nav ul:last-child{
+        padding-left: 30px!important;        
+    }
+}
+
 @media (max-width: 486px){
     .formCreat{
         height: 100%;
+    }
+
+    #contacts .form form{
+        justify-content: flex-start!important;
     }
 
     .formCreat .form h2 {
@@ -71,6 +81,14 @@
         flex-wrap: wrap;   
     }
 
+    #contacts .form form .input-email .email-person,
+    #contacts .form form .input-email .number-phone,
+    #contacts .form form .input-name .second-name,
+    #contacts .form form .input-name .first-name{
+        width: 70%;
+        position: relative;
+    }
+
     #contacts .form form .input-email input,
     #contacts .form form .input-name input{
         width: 100%;
@@ -87,6 +105,20 @@
 }
 
 @media (max-width: 566px) {
+
+    footer .content-footer .lista nav ul{
+        padding: 0!important;
+        border-left: 0;
+    }
+
+    footer .content-footer .lista nav ul:last-child{
+        height: 120px;        
+    }
+
+    footer .content-footer .lista nav ul:last-child .redes li{
+        margin: 10px;
+    }
+
     
     #abouts .content figure img{
         width: 300px;
@@ -114,26 +146,14 @@
         padding: 0;
     }
 
-    #contacts .contact-text h3{
-        color: black;
-    }
-
-    #contacts .contact-text p{
-        color: black;
-    }
-
     #contacts .contact-text .sociais{
         justify-content: flex-start!important;
         padding: 0;
         border-radius: 0;
-        color: black;
         text-align: center;
         background-color: white;
     }
 
-    #contacts .contact-text .sociais li a{
-        color: black;
-    }
 
     #home .clocks div img{
         width: 50%;
@@ -175,10 +195,21 @@
         padding-top: 5rem;
     }
 
+    #home .clocks {
+        padding: 20px 0px;
+    }
+
     #home .clocks div{
+        color: black;
+        background: white;
+        box-shadow: 0px 10px 10px 0px rgba(63, 61, 61, 0.623);
         margin: 10px;
-        margin-top: 0;
+        margin-top: 15px;
         border-radius: 5px;
+    }
+
+    #home .clocks div a p{
+        color: black;
     }
 
     #home .clocks{
@@ -392,7 +423,7 @@ header nav ul li::before{
    }
  
    header nav .input-search.showSearch{
-    width: 70%!important;
+    width: 85%!important;
     transition: width .35s ease;
    }
 
