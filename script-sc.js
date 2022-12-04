@@ -42,21 +42,18 @@ menu.onclick = () => {
     icons[0].classList.toggle('Closemenu');
 }
 
-const TextCategory = document.querySelector(".options-category"),
-options = document.querySelector(".options"),
+const options = document.querySelector(".options"),
 optionsFilter = document.querySelector(".optionsFilter"),
 h1filter = document.querySelector(".optionsFilter h1")
 
-TextCategory.onclick = () => {
+function ShowCate() {
     optionsFilter.classList.toggle("showCategory");
     optionsFilter.style.opacity = "1";
     h1filter.style.marginBottom = "10px";
     options.classList.toggle("ShowOptions")
 }
 
-const closeFilter = document.querySelector(".optionsFilter .close")
-
-closeFilter.onclick = () => {
+function CloseFilter() {
   optionsFilter.style.opacity = "0"
 }
 showClocks(clocks);
@@ -66,7 +63,6 @@ function showMarca(marca){
   let categoria = document.getElementById("categoriaMarcas");
 
   let marcas = " ";
-
 
   marca.forEach((infoMarca) => {
       let marca = infoMarca.marca;
@@ -142,11 +138,14 @@ ValueFilter.addEventListener("click",() => {
 function filterGenero() {
   let value = ValueFilterG.value;
   value = value.toLowerCase();
+  let escolha = document.getElementById("escolha");
 
   for(let card of Cards){
     const Genero = card.querySelector("h4");
 
     const valorueGenero = Genero.textContent.toLowerCase();
+
+    escolha.innerText = value;
 
     if(!value.includes(valorueGenero)){
       card.style.display = "none";
@@ -160,20 +159,6 @@ function filterGenero() {
 const ValueFilterG = document.querySelector("#CateGe select");
 
 ValueFilterG.addEventListener("click", filterGenero)
-
-const filter = document.querySelector('.filter .inputVa select')
-
-filter.addEventListener("click", verifiValu)
-
-function verifiValu(){
-  let newValue = filter.value;
-
-  if(newValue == "Maior que"){
-    console.log("maior")
-  }else{
-    console.log('menor')
-  }
-}
 
 const range = document.querySelector(".filter .range input");
 
