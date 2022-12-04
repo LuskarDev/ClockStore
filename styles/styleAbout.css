@@ -109,12 +109,24 @@ html{
 }
 
 #contacts {
+    position: relative;
     display: flex;
+    backdrop-filter: blur(10px);
     align-items: center;
     justify-content: space-between;
     font-family: var(--font);
     background-image: url(../assets/pexels-jeshootscom-714701.jpg);
     background-size: cover;
+}
+
+#contacts .img {
+    position: absolute;
+    left: 0;
+    width: 68%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    content: " ";
+    z-index: -1;
 }
 
 #contacts .contact-text{
@@ -125,14 +137,13 @@ html{
 }
 
 #contacts .contact-text .sociais {
-    width: 100%;
+    width: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
     background-color: white;
-    margin-top: 20px;
     color: black;
-    padding-left: 20px;
 }
 
 #contacts .contact-text .sociais a{
@@ -146,10 +157,14 @@ html{
 }
 
 #contacts .contact-text .sociais li{ 
+    width: 305px;
+    height: 30px;
+    text-align: left;
     font-family: var(--font);
     font-weight: 300;
     list-style: none;
     font-size: 1.2rem;
+    padding-left: 20px;
     margin: 5px 0;
 }
 
@@ -158,9 +173,13 @@ html{
     transition: all .25s ease;
 }
 
+#contacts .contact-text .contact-title{
+    margin-bottom: 3rem;
+
+}
+
 #contacts .contact-text h3{
     font-size: 2.5rem;
-    margin-bottom: 5px;
 }
 
 #contacts .contact-text p{
@@ -191,20 +210,26 @@ html{
 }
 
 #contacts .form form{
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 #contacts .form form textarea {
     width: 100%;
     border-radius: 4px;
     padding: 5px;
-    border: 1px solid grey;
+    border: 1px solid white;
     outline: none;
     resize: none;
     font-family: var(--font);
     background-color: transparent;
+    color: white;
+}
+
+#contacts .form form textarea::placeholder{
     color: white;
 }
 
@@ -238,7 +263,7 @@ html{
 #contacts .form form .input-email input,
 #contacts .form form .input-name input{
     padding: 8px;
-    border: 1px solid rgba(54, 51, 51, 0.719);
+    border: 1px solid white;
     border-radius: 20px;
     outline: none;
     background: transparent;
