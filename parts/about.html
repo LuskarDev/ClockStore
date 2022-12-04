@@ -18,10 +18,54 @@
 
         <!-- link css about-->
     <link rel="stylesheet" href="../styles/styleAbout.css">
+    <link rel="stylesheet" href="../styles/query.css">
 
     <title>Três Marias - Sobre Nós</title>
 </head>
 <body>
+
+    <div class="formCreat">
+        <div class="form">
+            <h2>Criar Conta</h2>
+            <form action="">
+                <div class="nameL">
+                    <div class="input-nameC">
+                        <label for="">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div class="input-lastC">
+                        <label for="">Sobrenome</label>
+                        <input type="text" name="last" id="last">
+                    </div>
+                </div>
+                <div class="input-EmailC">
+                    <label for="">Email</label>
+                    <div class="border">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+                <div class="input-passwordC">
+                    <label for="">Senha</label>
+                    <div class="border">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="paswwordC" id="paswwordC">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+                <div class="input-passwordCF">
+                    <label for="">Confirmar Senha</label>
+                    <div class="border">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="passwordCF" id="passwordCF">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+            </form>
+            <button>Criar conta</button>
+            <p onclick="CloseAccount()">Fechar</p>
+        </div>
+    </div>
 
     <header class="head-promotion">
         <h1><span>Frétes gratis </span>  Para Todo Brasil em Compras ácima de <strong>R$120,90</strong> <span><figure><img src="../assets/delivery-truck.png" alt="truck"></figure> </span> </h1>
@@ -29,9 +73,9 @@
     </header>
 
     <header>
-        <nav>
+        <nav class="navAb">
             <div class="logo"><a href="../index.html">As Três Marias</a></div>
-            <ul>
+            <ul class="listAb">
                 <li>
                     <a href="../index.html#home" target="_self">Início</a>
                 </li>
@@ -52,15 +96,41 @@
                 </div>
                 <i class="fa-solid fa-user accounts"></i>
                 <div class="account">
+                    <div class="title-login">
+                        <h2>Faça Login e Desfrute </h2>
+                    </div>
+                    <div class="input-name">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="input-password">
+                        <label for="password">Senha</label>
+                        <div class="border">
+                            <input type="password" name="password" id="password">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="txt">
+                        <div class="remember">
+                            <label for="check">Lembrar</label>
+                            <input type="checkbox" name="check" id="check">
+                        </div>
+                        <div class="creat">
+                            <p onclick="CreatAccount()">
+                                Criar conta
+                            </p>
+                        </div>
+                    </div>
                     <button>
                         <a href="">Login</a>
                     </button>
-                    <p>
-                        <a href="">Criar conta</a>
-                    </p>
+                    
+                </div>
+                <div id="menu" class="menu">
+                    <i onclick="ShowMenuA()" class="fa-solid fa-bars"></i>
+                    <i onclick="hiddenMenuA()" id="closeAb" class="fa-solid fa-x"></i>
                 </div>
             </div>
-            
         </nav>
     </header>
 
@@ -94,8 +164,8 @@
                         <a href="email@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                     </li>
                 </ul>
+            </div>
         </div>
-
     </section>
 
     <section id="contacts">
@@ -103,7 +173,7 @@
             <h3>
                 Entre em Contato conosco
             </h3>
-            <p>Atendimento online 20hrs</p>
+            <p>Atendimento online até as 20hrs</p>
 
             <ul class="sociais">
                 <li>
@@ -130,13 +200,12 @@
             <form action="">
                 <div class="input-name">
                     <div class="first-name">
-                        <input id="nome" type="text" required>
+                        <input id="nomeF" type="text" required>
                         <span>Nome</span>
                     </div>
                     <div class="second-name">
                         <input type="text" name="sobrenome" id="sobrenome">
                         <span>Sobrenome</span>
-
                     </div>
                 </div>
 
@@ -146,7 +215,7 @@
                         <span>Numero</span>
                     </div>
                     <div class="email-person">
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="emailF" required>
                         <span>Email</span>
 
                     </div>
@@ -231,7 +300,7 @@
      <!-- kit awesome-->
  <script src="https://kit.fontawesome.com/51bc08e9f3.js" crossorigin="anonymous"></script>
 
- <script src="../scripts/main.js"></script>
+ <script src="../main.js"></script>
 
 </body>
 </html>

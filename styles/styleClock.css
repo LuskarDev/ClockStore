@@ -1,18 +1,8 @@
 body {
+    position: relative;
     background-color:var(--background);
     background-size: cover;
-}
-
-header nav #cart .menu i:last-child{
-    display: none;
-} 
-
-header nav #cart .menu i:last-child.showClose{
-    display: block;
-}
-
-header nav #cart .menu i:first-child.Closemenu{
-    display: none;
+    background-image: linear-gradient(var(--text-color), var(--background));
 }
 
 header nav{
@@ -22,7 +12,7 @@ header nav{
 
 header nav .input-search{
     display: flex;
-    width: 40%;
+    width: 300px;
     background-color: white;
     padding: 0px;
     border: 1px solid rgba(51, 49, 49, 0.521);
@@ -50,43 +40,16 @@ header nav .input-search button {
     border-left: 1px solid rgba(51, 49, 49, 0.521);
 }
 
-header nav .lista{
-    opacity: 0;
-    visibility: hidden;
-    width: 0%;
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    position: fixed;
-    top: 0px;
-    right: 0;
-    padding-top: 10rem;
-    background-color: var(--bg-nav);
-    transition: width .35s ease; 
-    z-index: -1;
-}
-
-header nav .lista.showMenu{
-    opacity: 1;
-    visibility: visible;
-    width: 20%;
-    transition: width .45s ease; 
-}
-
-header nav .lista li{
-    width: 80%;
-    padding: 5px 10px;
-    margin: 5px 0px;
-}
-
-header nav .lista li a{
+header nav .input-search button:Hover{
+    background-color: var(--text-color);
     color: white;
-    font-size: 1.2rem;
 }
+
 
 section {
+    width: 100vw;
     height: 100%;
-    padding-top: 14rem;
+    padding-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,10 +58,11 @@ section {
 
 section .optionsFilter{
     position: fixed;
-    top: 110px;
+    top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     background-color: white;
     width: 100%;
@@ -106,23 +70,38 @@ section .optionsFilter{
     padding-top: 4rem;
     margin-bottom: 50px;
     transition: all .25s ease;
-
     z-index: 1;
+}
+
+
+section .optionsFilter .close i{
+    position: absolute;
+    color: black;
+    right: 30px;
+    top: 20px;
+    padding: 5px 7px;
+}
+
+section .optionsFilter .close i:hover{
+    cursor: pointer;
+    background-color: var(--footer);
+    color: white;
+    border-radius: 50%;
+    transition: all .25s ease;
 }
 
 section .optionsFilter h1{
     font-size: 1rem;
     font-family: var(--font);
-    margin-bottom: 30px;
+    margin-bottom: 0;
     cursor: pointer;
 }
 
 section .optionsFilter.showCategory{
     height: 170px;
-    transition: all .25s ease;
+    transition: all .35s ease;
     padding-top: 0;
 }
-
 
 section .optionsFilter h1 > span{
     font-weight: 400;
@@ -140,14 +119,18 @@ section .optionsFilter .options {
     align-items: center;
 }
 
-
 section .optionsFilter .options.ShowOptions{
     opacity: 1;
     visibility: visible;
+    transition: all .35s ease;
 }
 
 section .optionsFilter .options .filter{
+    position: relative;
     margin: 0 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
     font-family: var(--font);
     padding: 10px 15px;
     background: transparent;
@@ -159,37 +142,94 @@ section .optionsFilter .options .filter select{
     background: transparent;
     border:none;
     cursor: pointer;
+    outline: none;
+}
+
+section .optionsFilter .options .filter .range{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .optionsFilter .options .filter .range input[type="number"]{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--text-color);
+    color: black;
+    padding: 5px;
+    padding-left: 10px;
+    margin-left: 10px;
+    background-color: transparent;
 }
 
 section .products {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
-    height: 100%;
-    padding: 20px;
+    width: 100%;
+    padding: 50px 20px;
     background-color: var(--footer);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 section .products .card-product{
-    width: 20%;
+    width: 300px;
+    height: 340px;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    border: 1px solid rgba(71, 69, 69, 0.637);
-    margin: 10px 20px;
+    margin: 100px 20px;
     padding: 10px;
     background-color: white;
     border-radius: 5px;
+    background-image: linear-gradient(var(--text-color), var(--footer));
 }
 
+
+
+section .products .card-product:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform .25s ease;
+    box-shadow: 0px 8px 30px 0px rgba(43, 42, 42, 0.637);
+}
+
+section .products .card-product .flex{
+    display: flex;
+    padding: 0px 10px;
+    padding-left: 0px;
+    border: 1px solid var(--text-color);
+}
+
+section .products .card-product .flex button {
+    border: none;
+    font-family: 'Dancing';
+    font-weight: 300;
+    padding: 10px;
+
+    margin-right: 10px;
+    background-color: var(--footer);
+    color: white;
+}
+
+section .products .card-product .flex button:hover{
+    cursor: pointer;
+    background-color: var(--text-color);
+    transition: background-color .35s ease;
+}
 
 section .products .card-product h2{
     text-align: center;
     font-family: var(--font);
-    width: 80%;
-    margin: 5px 0px;
+    color: white;
+    width: 100%;
+    margin: 0px;
+    padding: 2px;
     font-weight: 700;
     font-size: 1rem;
 }
@@ -197,51 +237,103 @@ section .products .card-product h2{
 section .products .card-product h3{
     text-align: center;
     font-size: 1rem;
+    width: 60%;
+    padding: 0 5px;
+    background-color: var(--text-color);
     font-family: var(--font);
-    margin: 5px 0px;
+    color: white;
+    border: 1px solid var(--footer);
+    border-radius: 10px;
     font-weight: 200;
+}
+
+section .products .card-product h3 span{
+    font-weight: 700;
+    padding: 0px 10px;
+}
+
+section .products .card-product h4{
+    color: white;
+    font-family: "Dancing";
+    font-size: .8rem;
+    text-transform: uppercase;
+    background-color: var(--footer);
+    margin-top: 5px;
+    border: 1px solid var(--text-color);
+    padding: 5px 10px;
+}
+
+section .products .card-product .descri{
+    color: white;
+    text-align: justify;
 }
 
 section .products .card-product p {
     font-family: var(--font);
-    font-weight: 700;
+    font-weight: 300;
     margin: 5px 0;
+    padding: 5px;
+    color: white;
 }
-
-section .products .card-product:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-    transition: transform .25s ease;
-    box-shadow: 0px 3px 10px 0px grey;
-}
-
 
 section .products .card-product .buttons{
+    display: flex;
+    align-items: center;
     text-align: center;
 }
 
 section .products .card-product .buttons button{
+    position: relative;
     border:1px solid var(--text-color);
-    background: transparent;
+    background-color: var(--text-color);
     cursor: pointer;
-    color: var(--background);
-    width: 80%;
-    padding: 5px;
+    color: white;
+    width: 100%;
+    padding: 5px 35px;
     font-size: .8rem;
     font-family: var(--font);
     font-weight: 700;
     cursor: pointer;
-    margin: 5px;
+    margin: 10px 5px;
+    overflow: hidden;
+    border-radius: 4px;
+
+}
+
+section .products .card-product .buttons button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 50px;
+    transform: rotate(15deg) translateY(-57px);
+    opacity: 0.2;
+    background-color: rgba(100, 87, 65, 0.89);
+}
+
+section .products .card-product .buttons button:hover:after{
+    transform: rotate(15deg) translateY(25px);
+    transition: all .55s ease;
 }
 
 section .products .card-product .buttons button:hover{
-    border-radius: 4px;
-    transition: all .25s ease;
-    background-color: var(--text-color);
-    color: white;
+    border: none;
+    transition: all 2s ease-in;
+    background-color: #e5cba0;
+}
+
+section .products .card-product figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 section .products .card-product figure img{
-    width: 150px;
+    width: 130px;
     background-size: cover;
+    background-color: var(--footer);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--text-color);
 }

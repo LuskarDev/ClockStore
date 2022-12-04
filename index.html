@@ -18,10 +18,54 @@
 
     <!--link css-->
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/query.css">
 
     <title>As Três Marias - Início</title>
 </head>
 <body>
+
+    <div class="formCreat">
+        <div class="form">
+            <h2>Criar Conta</h2>
+            <form action="">
+                <div class="nameL">
+                    <div class="input-nameC">
+                        <label for="">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div class="input-lastC">
+                        <label for="">Sobrenome</label>
+                        <input type="text" name="last" id="last">
+                    </div>
+                </div>
+                <div class="input-EmailC">
+                    <label for="">Email</label>
+                    <div class="border">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+                <div class="input-passwordC">
+                    <label for="">Senha</label>
+                    <div class="border">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="paswwordC" id="paswwordC">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+                <div class="input-passwordCF">
+                    <label for="">Confirmar Senha</label>
+                    <div class="border">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="passwordCF" id="passwordCF">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+            </form>
+            <button>Criar conta</button>
+            <p onclick="CloseAccount()">Fechar</p>
+        </div>
+    </div>
 
     <img class="img-clock" src="assets/clock.png" alt="relogio" title="relogio" >
    
@@ -35,9 +79,9 @@
     </div>
     
     <header>
-        <nav>
+        <nav class="navIdx">
             <div class="logo"><a href="index.html">As Três Marias</a></div>
-            <ul>
+            <ul class="listaIdx">
                 <li>
                     <a href="#home">Início</a>
                 </li>
@@ -58,12 +102,38 @@
                 </div>
                 <i class="fa-solid fa-user accounts"></i>
                 <div class="account">
+                    <div class="title-login">
+                        <h2>Faça Login e Desfrute </h2>
+                    </div>
+                    <div class="input-name">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="input-password">
+                        <label for="password">Senha</label>
+                        <div class="border">
+                            <input type="password" name="password" id="password">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="txt">
+                        <div class="remember">
+                            <label for="check">Lembrar</label>
+                            <input type="checkbox" name="check" id="check">
+                        </div>
+                        <div class="creat">
+                            <p onclick="CreatAccount()">
+                                Criar conta
+                            </p>
+                        </div>
+                    </div>
                     <button>
                         <a href="">Login</a>
                     </button>
-                    <p>
-                        <a href="">Criar conta</a>
-                    </p>
+                </div>
+                <div id="menu" class="menu">
+                    <i onclick="ShowMenu()" class="fa-solid fa-bars"></i>
+                    <i onclick="hiddenMenu()" id="close" class="fa-solid fa-x"></i>
                 </div>
             </div>
         </nav>
@@ -86,20 +156,11 @@
     </section>
 
     <section id="product">
-
         <div class="swiper clock-product">
          <h3>Relógios Adicionados Recentementes</h3>
-
-
-            <div class="swiper-wrapper slides">
-
-            </div>
+            <div class="swiper-wrapper slides"></div>
             <div class="swiper-pagination"></div>
-
         </div>
-
-          
-
     </section>
 
     <div class="news-letter">
@@ -108,9 +169,8 @@
                 Receba Nossas promoções <br> no seu Email
             </h4>
         </div>
-
         <div class="input-news">
-            <input placeholder="Receba nossas promoções" type="email" name="email" id="email" required>
+            <input placeholder="Receba nossas promoções" type="email" name="emailNew" id="emailNew" required>
             <button>Enviar</button>
         </div>
     </div>
@@ -189,9 +249,10 @@
  <script src="https://kit.fontawesome.com/51bc08e9f3.js" crossorigin="anonymous"></script>
 
 
- <script src="scripts/dados/dados.js"></script>
- <script src="scripts/script-pp.js"></script>
- <script src="scripts/main.js"></script>
+ <script src="./dados.js"></script>
+ <script src="./script-pp.js"></script>
+ <script src="./script-sc.js"></script>
+ <script src="./main.js"></script>
 
 <script>
 var swiper = new Swiper(".principal", {
